@@ -2,15 +2,22 @@
 using namespace std;
 
 int main(){
-    int x,y;
-    cin>>x;
+    
+    char grade;
+    cin>>grade;
 
-    for(int i=0;i<x;i++){
-        for(y=0;y<x;y++){
-            cout<<"* ";
-        }
-        cout<<"\n";
+    switch(grade){
+        case 'A':cout<<"Your Grade is :"<<++grade;
+        break;
+        case 'B':cout<<"Your Grade is :"<<grade+1;
+        break;
+        case 'C':cout<<"Your Grade is :"<<grade++;
+        break;
+        case 'D':cout<<"Your Grade is :"<<--grade;
+        break;
+        default:cout<<"Your Grade is :"<<grade+2;
     }
     
-    return -1;
+
+    return 0;
 }
